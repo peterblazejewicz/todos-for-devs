@@ -1,0 +1,40 @@
+@Backend_HostAddress = http://localhost:8080
+
+GET {{Backend_HostAddress}}/api/todoitems
+Accept: application/json
+
+###
+
+GET {{Backend_HostAddress}}/api/todoitems/complete
+Accept: application/json
+
+###
+
+GET {{Backend_HostAddress}}/api/todoitems/2
+
+###
+
+POST {{Backend_HostAddress}}/api/todoitems
+Content-Type: application/json
+
+{
+  "name": "Test drive Jeep CJ",
+  "isComplete": false
+}
+
+###
+
+PUT {{Backend_HostAddress}}/api/todoitems/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Make coffee",
+  "isComplete": true
+}
+
+###
+
+DELETE {{Backend_HostAddress}}/api/todoitems/4
+
+###
